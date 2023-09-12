@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+body {
+    background-color: rgba(7, 38, 90, 0.927);
+}
+
 .container {
     height: 100vh;
     display: flex;
@@ -102,4 +106,14 @@ oppure i caratteri ∧ (&and;) e ∨ (&or;)
     bottom: 35%;
     left: 50%;
     transform: translate(-50%) rotate(135deg);
+}
+
+
+.button_auto {
+  background-color: aliceblue;
+}
+
+.tcenter {
+    text-align: center;
+    margin-top: 2rem
 }

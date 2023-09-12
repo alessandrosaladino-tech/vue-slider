@@ -15,8 +15,8 @@ const { createApp } = Vue
 createApp({
     data() {
         return {
-            activeImage: 0 ,
-            
+            activeImage: 0,
+
             games: [
                 {
                     image: "./assets/img/01.webp",
@@ -45,5 +45,40 @@ createApp({
                 }
             ]
         }
+    },
+
+    methods: {
+
+        next() {
+            console.log("next");
+            this.activeImage++;
+
+            if (this.activeImage > this.games.length - 1) {
+                this.activeImage = 0
+            }
+
+            
+        },
+
+        prev() {
+            console.log("prev");
+            this.activeImage--;
+
+            if (this.activeImage > 0) {
+                this.activeImage = this.games.length - 1
+            }
+        },
+
+        showThumbs (index) {
+            this.activeImage = index;
+        },
+
+        autoPlay() {
+            setInterval(this.next, 2000)   //Si può creare senza il bottone?
+        }
+        
+
     }
 }).mount("#app")
+
+
