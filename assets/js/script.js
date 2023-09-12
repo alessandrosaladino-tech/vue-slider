@@ -64,7 +64,7 @@ createApp({
             console.log("prev");
             this.activeImage--;
 
-            if (this.activeImage > 0) {
+            if (this.activeImage < 0) {
                 this.activeImage = this.games.length - 1
             }
         },
