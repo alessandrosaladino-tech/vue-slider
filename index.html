@@ -14,11 +14,10 @@
     <div id="app">
         <h1 class="tcenter">{{games[activeImage].title}}</h1>
         <div class="tcenter">
-            <button @click ="autoPlay()" class="button_auto">Auto Play</button>
         </div>
         <div class="container">
 
-            <div class="slider-wrapper" tabindex="0">
+            <div class="slider-wrapper" tabindex="0" @mouseover="autoPlay" @mouseleave="stopPlay">
 
                 <div class="item">
                     <img v-bind:src="games[activeImage].image" alt="Spiderman" />

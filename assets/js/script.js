@@ -77,6 +77,10 @@ createApp({
            const play = setInterval(this.next, 2000)   //Si può creare senza il bottone?
            //Come fare per bloccare l'autoplay, posso farlo con lo stesso bottone o devo creare un secondo bottone per farlo fermare?
         },
+
+        stopPlay () {
+            clearInterval(this.play)
+        }
         
 
     }
